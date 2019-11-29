@@ -6,7 +6,7 @@ const infoOutput ={ service_name: 'HK Apps',
 		    git_commit_sha: process.env.GIT_COMMIT,
 		        environment: {
 			   service_port: process.env.PORT,
-			   log_level: INFO,
+			   log_level: 'INFO',
 		   	}
 		}
 const server = http.createServer((req, res) => {
