@@ -7,13 +7,14 @@ const infoOutput ={ service_name: 'HK Apps',
 		}
 const server = http.createServer((req, res) => {
 	if (req.url == '/') { //check the URL of the current request
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.write(JSON.stringify({ message: "Welcome to the index page"}));  
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.write("Welcome to the index page \n");  
             res.end();  
     	}
     	else if (req.url == "/info") {
             res.writeHead(200, { 'Content-Type': 'application/json' });
 	    res.write(JSON.stringify(infoOutput, null, "\t"));
+	    res.write("\n");
             res.end();
     	}
     	else
