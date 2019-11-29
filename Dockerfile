@@ -14,8 +14,10 @@ EXPOSE 8080
 CMD ["node", "app.js"]
 
 # ARGUMENTS
-ARG GIT_COMMIT
+ARG GIT_COMMIT=NotProvided
 ENV GIT_COMMIT ${GIT_COMMIT}
-ENV PORT=8080
+ENV service_port=8080
+ENV log_level=INFO
 
+#
 ENTRYPOINT []

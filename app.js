@@ -1,12 +1,12 @@
 const http = require('http');
 const hostname = '0.0.0.0';
-const port = process.env.PORT;
+const port = process.env.service_port;
 const infoOutput ={ service_name: 'HK Apps',
 		    version: '1.0', 
 		    git_commit_sha: process.env.GIT_COMMIT,
 		        environment: {
-			   service_port: process.env.PORT,
-			   log_level: 'INFO',
+			   service_port: process.env.service_port,
+			   log_level: process.env.log_level,
 		   	}
 		}
 const server = http.createServer((req, res) => {
