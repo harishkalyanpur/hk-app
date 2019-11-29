@@ -1,6 +1,6 @@
 const http = require('http');
 const hostname = '0.0.0.0';
-const port = 8080;
+const port = 80;
 const infoOutput ={ service_name: 'HK Apps',
 		    version: '1.0', 
 		    git_commit_sha: process.env.GIT_COMMIT
