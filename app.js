@@ -1,10 +1,9 @@
 const http = require('http');
-const GIT_COMMIT_SHA = process.env.GIT_COMMIT
 const hostname = '0.0.0.0';
 const port = 8080;
-const output =	{ AppName: 'HK Apps',
-		  Version: '1.0', 
-		  git_commit_sha: GIT_COMMIT_SHA,
+const infoOutput ={ service_name: 'HK Apps',
+		    version: '1.0', 
+		    git_commit_sha: process.env.GIT_COMMIT
 		}
 const server = http.createServer((req, res) => {
 	if (req.url == '/') { //check the URL of the current request
@@ -14,7 +13,7 @@ const server = http.createServer((req, res) => {
     	}
     	else if (req.url == "/info") {
             res.writeHead(200, { 'Content-Type': 'application/json' });
-	    res.write(JSON.stringify({output}));
+	    res.write(JSON.stringify(infoOutput, null, "\t"));
             res.end();
     	}
     	else
