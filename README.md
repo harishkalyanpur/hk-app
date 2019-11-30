@@ -1,2 +1,3 @@
 # hk-app
-node.js script is used as application
+node.js is used to create the application
+Refer word document

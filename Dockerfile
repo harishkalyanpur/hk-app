@@ -11,7 +11,7 @@ ADD . /app
 EXPOSE 8080
 
 # Run app.js using node when the container launches
-CMD ["node", "app.js"]
+CMD ["node", "src/app.js"]
 
 # ARGUMENTS
 ARG GIT_COMMIT=NotProvided
